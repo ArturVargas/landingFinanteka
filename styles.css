@@ -1,0 +1,11 @@
+
+body {
+    background: #11998e;
+    background: -webkit-linear-gradient(to right, #11998e, #38ef7d);
+    background: linear-gradient(to right, #11998e, #38ef7d); 
+    color: #fff;
+  }
+  
+.bg-teka {
+    background-color: #239C81;
+}

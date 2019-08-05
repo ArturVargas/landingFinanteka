@@ -5,7 +5,17 @@ body {
     background: linear-gradient(to right, #11998e, #70716E);  */
     color: #fff;
     font-family: 'Raleway', sans-serif;
-  }
+}
+
+.carousel-item {
+	height: 500px;
+}
+  
+.carousel-item img {
+    top: 0;
+	left: 0;
+	min-height: 300px;
+}
   
 .bg-teka {
     background-color: #239C81;

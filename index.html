@@ -45,7 +45,7 @@
             </div>
         </div>
     </nav>
-    <!-- <div class="espacio"></div> -->
+
     <!-- Primera pagina -->
     <div class="row">
 
@@ -58,7 +58,7 @@
                         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <img src="img/adult.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
@@ -202,39 +202,30 @@
 
         <div class="footer-right">
             <p>Contactanos.</p>
-
-            <!-- <form action="#" method="post">
-                <input type="text" name="text" placeholder="Nombre" />
-                <input type="text" name="email" placeholder="Correo Electronico" />
-                <input type="text" name="number" placeholder="Telefono" />
-                <br>
-                <select id="exampleFormControlSelect1" placeholder="Me interesa">
-                    <option value="invest">Invertir</option>
-                    <option value="lend">Un Prestamo</option>
-                    <option value="ambassador">Ser Embajador</option>
-                </select>
-                <button>Enviar</button>
-            </form> -->
-
-            <div class="fb-customerchat" page_id="<ENTER-YOUR-FACEBOOK-ID-HERE>" minimized="true">
-            </div>
+            
+            <!-- Load Facebook SDK for JavaScript -->
+            <div id="fb-root"></div>
             <script>
                 window.fbAsyncInit = function () {
                     FB.init({
-                        appId: '912333495590130',
-                        autoLogAppEvents: true,
                         xfbml: true,
-                        version: 'v2.11'
+                        version: 'v4.0'
                     });
                 };
+
                 (function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) { return; }
+                    if (d.getElementById(id)) return;
                     js = d.createElement(s); js.id = id;
-                    js.src = "https://connect.facebook.net/en_US/sdk.js";
+                    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
                     fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-            </script>
+                }(document, 'script', 'facebook-jssdk'));</script>
+
+            <!-- Your customer chat code -->
+            <div class="fb-customerchat" attribution=setup_tool page_id="" theme_color="#239C81"
+                logged_in_greeting="Hola! Cómo puedo ayudarte hoy?"
+                logged_out_greeting="Hola! Cómo puedo ayudarte hoy?">
+            </div>
 
         </div>
 
